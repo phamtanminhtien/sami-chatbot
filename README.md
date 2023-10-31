@@ -13,14 +13,14 @@ npm install --save sami-chatbot
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { SamiChatBox } from 'react'
 
-import MyComponent from 'sami-chatbot'
+import SamiChatBox from 'sami-chatbot'
 import 'sami-chatbot/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <SamiChatBox />
   }
 }
 ```

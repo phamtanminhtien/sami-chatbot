@@ -1,21 +1,21 @@
 import { useState, createElement } from 'react';
 
-const SamiChatBox = ({
-  config
-}) => {
-  const {
-    containerWidth,
-    containerHeight
-  } = config || {
-    containerWidth: 500,
-    containerHeight: 80
-  };
-  const [isShow, setIsShow] = useState(false);
+var SamiChatBox = function SamiChatBox(_ref) {
+  var config = _ref.config;
+  var _ref2 = config || {
+      containerWidth: 500,
+      containerHeight: 80
+    },
+    containerWidth = _ref2.containerWidth,
+    containerHeight = _ref2.containerHeight;
+  var _React$useState = useState(false),
+    isShow = _React$useState[0],
+    setIsShow = _React$useState[1];
   return createElement("div", {
     id: 'sami_chatbot'
   }, createElement("div", {
     id: 'sami_chatbot_btn',
-    onClick: () => {
+    onClick: function onClick() {
       setIsShow(!isShow);
     }
   }, createElement("img", {
@@ -23,8 +23,8 @@ const SamiChatBox = ({
   })), createElement("div", {
     id: 'sami_chatbot_iframe',
     style: {
-      width: `${containerWidth}px`,
-      height: `${containerHeight}vh`,
+      width: containerWidth + "px",
+      height: containerHeight + "vh",
       display: isShow ? 'block' : 'none',
       opacity: isShow ? 1 : 0
     }
@@ -35,7 +35,7 @@ const SamiChatBox = ({
     frameBorder: '0'
   }), createElement("div", {
     id: 'sami_chatbot_close',
-    onClick: () => {
+    onClick: function onClick() {
       setIsShow(false);
     }
   }, createElement("svg", {
