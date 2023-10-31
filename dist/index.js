@@ -1,7 +1,8 @@
 var React = require('react');
 
 var SamiChatBox = function SamiChatBox(_ref) {
-  var config = _ref.config;
+  var config = _ref.config,
+    clientId = _ref.clientId;
   var _ref2 = config || {
       containerWidth: 500,
       containerHeight: 80
@@ -31,7 +32,7 @@ var SamiChatBox = function SamiChatBox(_ref) {
   }, React.createElement("iframe", {
     width: '100%',
     height: '100%',
-    src: 'https://chat.sami-ai.vn/embed?id=e1521a1a-1f22-4673-91c4-806afe17e339',
+    src: "https://chat.sami-ai.vn/embed?id=" + clientId,
     frameBorder: '0'
   }), React.createElement("div", {
     id: 'sami_chatbot_close',

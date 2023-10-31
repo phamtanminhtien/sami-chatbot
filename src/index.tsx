@@ -4,6 +4,8 @@ import './styles.module.css'
 type Props = {
   /** The config of the chatbot */
   config?: UiConfig
+  /** The id of the chatbot */
+  clientId: string
 }
 
 interface UiConfig {
@@ -17,7 +19,7 @@ interface UiConfig {
   containerHeight: number
 }
 
-export const SamiChatBox = ({ config }: Props) => {
+export const SamiChatBox = ({ config, clientId }: Props) => {
   const { containerWidth, containerHeight } = config || {
     containerWidth: 500,
     containerHeight: 80
@@ -46,7 +48,7 @@ export const SamiChatBox = ({ config }: Props) => {
         <iframe
           width='100%'
           height='100%'
-          src='https://chat.sami-ai.vn/embed?id=e1521a1a-1f22-4673-91c4-806afe17e339'
+          src={`https://chat.sami-ai.vn/embed?id=${clientId}`}
           frameBorder='0'
         />
         <div

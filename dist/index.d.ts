@@ -3,6 +3,8 @@ import './styles.module.css';
 declare type Props = {
     /** The config of the chatbot */
     config?: UiConfig;
+    /** The id of the chatbot */
+    clientId: string;
 };
 interface UiConfig {
     /** The width of the chatbot container with unit px
@@ -14,5 +16,5 @@ interface UiConfig {
      */
     containerHeight: number;
 }
-export declare const SamiChatBox: ({ config }: Props) => React.JSX.Element;
+export declare const SamiChatBox: ({ config, clientId }: Props) => React.JSX.Element;
 export {};
